@@ -23,8 +23,18 @@ int main()
         {1, 1, 0, 1},
         {1, 0, 0, 1}
     };
+
+
+		 size_t dailyNeed = 1;
+    size_t maxShifts = 3;
+    AvailabilityMatrix avails = { 
+        {1},
+		{1},
+        {1}
+    };
+
     DailySchedule sched;
-    bool solutionFound = schedule(avail, 2, 2, sched);
+    bool solutionFound = schedule(avails, dailyNeed, maxShifts, sched);
     if(solutionFound)
     {
         printSchedule(sched);

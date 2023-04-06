@@ -23,10 +23,14 @@ int main(int argc, char* argv[])
     if(argc > 2){
         floatingChars = argv[2];
     }
+		 
     std::set<string> answers;
     answers = wordle(in, floatingChars, dict);
+		cout << "__________" << endl; 
     for(auto s : answers){
         cout << s << endl;
     }
+
+		
     return 0;
 }
